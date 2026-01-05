@@ -1,0 +1,285 @@
+ Slot Engine MVP – Backend Design Document
+
+ 1. Purpose
+
+This document defines a Minimum Viable Product (MVP) backend architecture for a slot machine game engine. It focuses on correctness, scalability, configurability, and auditability, suitable for real-money or demo casino-style games.
+
+The MVP is designed to be:
+
+* Deterministic & testable
+* RTP-driven and configurable
+* Easy to extend (free spins, bonus games, multipliers)
+* Compatible with Socket.IO / REST-based game servers
+
+
+ 2. Scope (MVP Only)
+
+ Included
+
+* Base slot game logic
+* Reel & symbol configuration
+* Spin execution
+* Win evaluation (paylines / ways)
+* RTP control via probabilities
+* Wallet debit/credit hooks
+* Round lifecycle management
+* Basic provably-fair hooks (seed-based RNG)
+
+ Excluded (Post-MVP)
+
+* Progressive jackpots
+* Complex bonus games (pick & win, cascading reels)
+* Client animations
+* Anti-fraud & AML systems
+* Regulatory certification
+
+
+ 3. High-Level Architecture
+
+Client (Web / Mobile)
+      |
+      v
+Game Gateway (Socket / REST)
+      |
+      v
+Slot Game Engine (Core)
+├── RNG Module
+├── Reel Generator
+├── Win Evaluator
+├── RTP Controller
+├── Round Manager
+└── Settlement Handler
+      |
+      v
+Wallet Service (DB / Microservice)
+
+
+ 4. Core Concepts
+
+ 4.1 Symbols
+
+Each symbol has:
+
+* `id`
+* `name`
+* `type` (NORMAL | WILD | SCATTER | BONUS)
+* `payouts` (by count)
+* `weight` (probability control)
+
+Example:
+
+A: {3: 5x, 4: 20x, 5: 100x}
+WILD: substitutes all except SCATTER
+
+
+ 4.2 Reels
+
+* Slot has N reels (usually 5)
+* Each reel contains symbols with weights
+* Reel strips can be:
+
+  * Static (predefined)
+  * Dynamic (generated per spin)
+
+MVP Recommendation: Weighted dynamic reels
+
+
+ 4.3 Paylines / Ways
+
+MVP supports Paylines:
+
+* Fixed number of paylines (e.g., 20)
+* Each payline defines symbol positions per reel
+
+Later upgrade: All-Ways / Megaways
+
+
+ 5. Spin Lifecycle
+
+ 5.1 Spin Request
+
+Input:
+
+* `userId`
+* `betAmount`
+* `lines`
+* `clientSeed` (optional)
+
+Validation:
+
+* Wallet balance check
+* Bet limits
+* Game state (not already spinning)
+
+
+ 5.2 RNG Generation
+
+* Server-side secure RNG
+* Seed = `hash(serverSeed + clientSeed + nonce)`
+* Deterministic output for audit
+
+Outputs:
+
+* Reel stop positions
+
+
+ 5.3 Reel Outcome Generation
+
+For each reel:
+
+* Pick symbols using weighted probability
+* Construct visible window (e.g., 3 rows)
+
+Output:
+
+[
+  [A, K, Q],
+  [WILD, A, J],
+  [A, A, SCATTER],
+  ...
+]
+
+
+ 5.4 Win Evaluation
+
+For each payline:
+
+1. Traverse symbols left → right
+2. Apply WILD substitution
+3. Count consecutive matching symbols
+4. Fetch payout multiplier
+5. Calculate line win
+
+Total Win:
+
+SUM(lineWin × betPerLine)
+
+
+ 5.5 RTP Control (MVP)
+
+RTP is controlled via:
+
+* Symbol weights
+* Reel symbol distribution
+
+Rules:
+
+* No direct manipulation of outcomes
+* Long-term RTP converges statistically
+
+Target RTP Example:
+
+* 97.00%
+
+
+ 5.6 Settlement
+
+* Debit bet before spin
+* Credit win after evaluation
+* Atomic transaction
+
+Failure handling:
+
+* Idempotent roundId
+* Retry-safe wallet calls
+
+
+ 6. Data Models (Simplified)
+
+ 6.1 Spin Request
+
+{
+  userId,
+  gameId,
+  betAmount,
+  lines,
+  clientSeed
+}
+
+ 6.2 Spin Result
+
+{
+  roundId,
+  reels,
+  lineWins,
+  totalWin,
+  balanceAfter,
+  serverSeedHash
+}
+
+
+ 7. Configuration-Driven Design
+
+All game behavior should come from config:
+
+* Symbols
+* Weights
+* Paylines
+* RTP targets
+* Bet limits
+
+Allows:
+
+* A/B testing
+* Operator-specific tuning
+* Fast game launches
+
+
+ 8. Error Handling
+
+* Invalid bet → reject spin
+* Wallet failure → rollback
+* Engine error → void round
+
+All errors logged with:
+
+* roundId
+* userId
+* seed
+
+
+ 9. Logging & Auditing
+
+Mandatory logs:
+
+* Spin request
+* RNG seed
+* Reel outcome
+* Win calculation
+* Wallet settlement
+
+Purpose:
+
+* Dispute resolution
+* RTP verification
+* Regulatory audits
+
+
+ 10. MVP Performance Targets
+
+* Stateless engine (Redis for state if needed)
+* Horizontally scalable
+
+
+ 11. MVP Extension Roadmap
+
+Post-MVP features:
+
+* Free spins
+* Scatter-triggered bonuses
+* Multipliers & sticky wilds
+* Cascading reels
+* Progressive jackpots
+* Full provably-fair UI exposure
+
+
+ 12. Summary
+
+This MVP slot engine backend:
+
+* Is mathematically correct
+* Is scalable and auditable
+* Separates configuration from logic
+* Forms a strong foundation for advanced casino games
+
+Designed to ship fast, scale safely, and evolve cleanly.

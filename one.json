@@ -1,0 +1,698 @@
+{
+    "slotId": "1",
+    "version": "0.0.1",
+    "grId": {
+        "columns": 5,
+        "rows": 3
+    },
+    "paylines": {
+        "1": {
+            "id": 1,
+            "positions": [
+                {
+                    "column": 0,
+                    "row": 0
+                },
+                {
+                    "column": 1,
+                    "row": 0
+                },
+                {
+                    "column": 2,
+                    "row": 0
+                },
+                {
+                    "column": 3,
+                    "row": 0
+                },
+                {
+                    "column": 4,
+                    "row": 0
+                }
+            ]
+        },
+        "2": {
+            "id": 2,
+            "positions": [
+                {
+                    "column": 0,
+                    "row": 1
+                },
+                {
+                    "column": 1,
+                    "row": 1
+                },
+                {
+                    "column": 2,
+                    "row": 1
+                },
+                {
+                    "column": 3,
+                    "row": 1
+                },
+                {
+                    "column": 4,
+                    "row": 1
+                }
+            ]
+        },
+        "3": {
+            "id": 3,
+            "positions": [
+                {
+                    "column": 0,
+                    "row": 2
+                },
+                {
+                    "column": 1,
+                    "row": 2
+                },
+                {
+                    "column": 2,
+                    "row": 2
+                },
+                {
+                    "column": 3,
+                    "row": 2
+                },
+                {
+                    "column": 4,
+                    "row": 2
+                }
+            ]
+        },
+        "4": {
+            "id": 4,
+            "positions": [
+                {
+                    "column": 0,
+                    "row": 0
+                },
+                {
+                    "column": 1,
+                    "row": 1
+                },
+                {
+                    "column": 2,
+                    "row": 2
+                },
+                {
+                    "column": 3,
+                    "row": 1
+                },
+                {
+                    "column": 4,
+                    "row": 0
+                }
+            ]
+        },
+        "5": {
+            "id": 5,
+            "positions": [
+                {
+                    "column": 0,
+                    "row": 2
+                },
+                {
+                    "column": 1,
+                    "row": 1
+                },
+                {
+                    "column": 2,
+                    "row": 0
+                },
+                {
+                    "column": 3,
+                    "row": 1
+                },
+                {
+                    "column": 4,
+                    "row": 2
+                }
+            ]
+        },
+        "6": {
+            "id": 6,
+            "positions": [
+                {
+                    "column": 0,
+                    "row": 1
+                },
+                {
+                    "column": 1,
+                    "row": 0
+                },
+                {
+                    "column": 2,
+                    "row": 1
+                },
+                {
+                    "column": 3,
+                    "row": 0
+                },
+                {
+                    "column": 4,
+                    "row": 1
+                }
+            ]
+        },
+        "7": {
+            "id": 7,
+            "positions": [
+                {
+                    "column": 0,
+                    "row": 1
+                },
+                {
+                    "column": 1,
+                    "row": 2
+                },
+                {
+                    "column": 2,
+                    "row": 1
+                },
+                {
+                    "column": 3,
+                    "row": 2
+                },
+                {
+                    "column": 4,
+                    "row": 1
+                }
+            ]
+        },
+        "8": {
+            "id": 8,
+            "positions": [
+                {
+                    "column": 0,
+                    "row": 0
+                },
+                {
+                    "column": 1,
+                    "row": 0
+                },
+                {
+                    "column": 2,
+                    "row": 1
+                },
+                {
+                    "column": 3,
+                    "row": 2
+                },
+                {
+                    "column": 4,
+                    "row": 2
+                }
+            ]
+        },
+        "9": {
+            "id": 9,
+            "positions": [
+                {
+                    "column": 0,
+                    "row": 2
+                },
+                {
+                    "column": 1,
+                    "row": 2
+                },
+                {
+                    "column": 2,
+                    "row": 1
+                },
+                {
+                    "column": 3,
+                    "row": 0
+                },
+                {
+                    "column": 4,
+                    "row": 0
+                }
+            ]
+        },
+        "10": {
+            "id": 10,
+            "positions": [
+                {
+                    "column": 0,
+                    "row": 1
+                },
+                {
+                    "column": 1,
+                    "row": 0
+                },
+                {
+                    "column": 2,
+                    "row": 1
+                },
+                {
+                    "column": 3,
+                    "row": 2
+                },
+                {
+                    "column": 4,
+                    "row": 1
+                }
+            ]
+        }
+    },
+    "symbols": {
+        "A": {
+            "id": "1",
+            "category": "NORMAL",
+            "payouts": {
+                "3": 0.2,
+                "4": 0.5,
+                "5": 1
+            },
+            "behavior": {}
+        },
+        "K": {
+            "id": "2",
+            "category": "NORMAL",
+            "payouts": {
+                "3": 0.2,
+                "4": 0.6,
+                "5": 1.2
+            },
+            "behavior": {}
+        },
+        "J": {
+            "id": "3",
+            "category": "NORMAL",
+            "payouts": {
+                "3": 0.3,
+                "4": 0.9,
+                "5": 1.6
+            },
+            "behavior": {}
+        },
+        "Q ": {
+            "id": "4",
+            "category": "NORMAL",
+            "payouts": {
+                "3": 0.3,
+                "4": 0.8,
+                "5": 1.5
+            },
+            "behavior": {}
+        },
+        "EAGLE": {
+            "id": "5",
+            "category": "NORMAL",
+            "payouts": {
+                "3": 2,
+                "4": 6,
+                "5": 12
+            },
+            "behavior": {}
+        },
+        "WINGS": {
+            "id": "6",
+            "category": "NORMAL",
+            "payouts": {
+                "3": 1,
+                "4": 3,
+                "5": 6
+            },
+            "behavior": {}
+        },
+        "SNAKE": {
+            "id": "7",
+            "category": "NORMAL",
+            "payouts": {
+                "3": 0.7,
+                "4": 2,
+                "5": 4
+            },
+            "behavior": {}
+        },
+        "FEATHERS": {
+            "id": "8",
+            "category": "NORMAL",
+            "payouts": {
+                "3": 0.5,
+                "4": 1.5,
+                "5": 3
+            },
+            "behavior": {}
+        },
+        "MOUNT": {
+            "id": "9",
+            "category": "WILD",
+            "substitutesFor": "ALL_EXCEPT_SCATTER",
+            "payouts": {
+                "3": 2,
+                "4": 5,
+                "5": 10
+            },
+            "behavior": {}
+        },
+        "GOLD_EAGLE": {
+            "id": "10",
+            "category": "WILD",
+            "substitutesFor": "ALL",
+            "payouts": {
+                "3": 5,
+                "4": 15,
+                "5": 50
+            },
+            "behavior": {
+                "multiplier": {
+                    "initialValues": [
+                        2,
+                        3,
+                        5
+                    ],
+                    "contributesToLineWin": {
+                        "onlyIfAbove": 1
+                    },
+                    "increaseRules": {
+                        "SCATTER_LAND": {
+                            "incrementBy": 1
+                        },
+                        "FREE_SPIN_START": {
+                            "incrementBy": 0
+                        },
+                        "FREE_SPIN_END": {
+                            "incrementBy": 0
+                        }
+                    }
+                },
+                "sticky": {
+                    "enabledInModes": {
+                        "BASE": true,
+                        "FREE_SPINS": true,
+                        "BONUS": true
+                    },
+                    "persistsBetweenSpins": true
+                }
+            }
+        }
+    },
+    "modes": {
+        "BASE": {
+            "reelStrips": {
+                "0": {
+                    "reelIndex": 0,
+                    "symbols": [
+                        "A",
+                        "K",
+                        "Q",
+                        "EAGLE",
+                        "J",
+                        "A",
+                        "SCATTER"
+                    ]
+                },
+                "1": {
+                    "reelIndex": 1,
+                    "symbols": [
+                        "K",
+                        "Q",
+                        "EAGLE",
+                        "A",
+                        "J",
+                        "K"
+                    ]
+                },
+                "2": {
+                    "reelIndex": 2,
+                    "symbols": [
+                        "Q",
+                        "EAGLE",
+                        "A",
+                        "K",
+                        "SCATTER"
+                    ]
+                },
+                "3": {
+                    "reelIndex": 3,
+                    "symbols": [
+                        "A",
+                        "K",
+                        "Q",
+                        "J",
+                        "EAGLE"
+                    ]
+                },
+                "4": {
+                    "reelIndex": 4,
+                    "symbols": [
+                        "K",
+                        "Q",
+                        "A",
+                        "EAGLE",
+                        "SCATTER"
+                    ]
+                }
+            },
+            "availableSymbols": {
+                "A": true,
+                "K": true,
+                "Q": true,
+                "J": true,
+                "EAGLE": true,
+                "SCATTER": true
+            },
+            "features": {
+                "FREE_SPINS_TRIGGER": {
+                    "trigger": {
+                        "type": "SCATTER_COUNT",
+                        "symbolId": "SCATTER",
+                        "countToReward": {
+                            "3": {
+                                "type": "FREE_SPINS",
+                                "spins": 10
+                            },
+                            "4": {
+                                "type": "FREE_SPINS",
+                                "spins": 15
+                            },
+                            "5": {
+                                "type": "FREE_SPINS",
+                                "spins": 25
+                            }
+                        }
+                    },
+                    "reward": {
+                        "type": "FREE_SPINS",
+                        "spins": 10
+                    }
+                }
+            },
+            "spinRules": {
+                "BASE_SPIN_ALLOWED": {
+                    "id": "BASE_SPIN_ALLOWED",
+                    "enabledInModes": {
+                        "BASE": true,
+                        "FREE_SPINS": false,
+                        "BONUS": false
+                    }
+                }
+            }
+        },
+        "FREE_SPINS": {
+            "reelStrips": {
+                "0": {
+                    "reelIndex": 0,
+                    "symbols": [
+                        "A",
+                        "K",
+                        "Q",
+                        "EAGLE",
+                        "EAGLE"
+                    ]
+                },
+                "1": {
+                    "reelIndex": 1,
+                    "symbols": [
+                        "K",
+                        "Q",
+                        "EAGLE",
+                        "A",
+                        "EAGLE"
+                    ]
+                },
+                "2": {
+                    "reelIndex": 2,
+                    "symbols": [
+                        "Q",
+                        "EAGLE",
+                        "A",
+                        "K"
+                    ]
+                },
+                "3": {
+                    "reelIndex": 3,
+                    "symbols": [
+                        "A",
+                        "K",
+                        "Q",
+                        "EAGLE"
+                    ]
+                },
+                "4": {
+                    "reelIndex": 4,
+                    "symbols": [
+                        "K",
+                        "Q",
+                        "A",
+                        "EAGLE"
+                    ]
+                }
+            },
+            "availableSymbols": {
+                "A": true,
+                "K": true,
+                "Q": true,
+                "EAGLE": true
+            },
+            "features": {
+                "FREE_SPIN_RETRIGGER": {
+                    "trigger": {
+                        "type": "SCATTER_COUNT",
+                        "symbolId": "SCATTER",
+                        "countToReward": {
+                            "3": {
+                                "type": "RETRIGGER_FREE_SPINS",
+                                "spins": 5,
+                                "emitEvent": "FREE_SPIN_START"
+                            }
+                        }
+                    },
+                    "reward": {
+                        "type": "RETRIGGER_FREE_SPINS",
+                        "spins": 5
+                    }
+                }
+            },
+            "spinRules": {
+                "FREE_SPIN_ONLY": {
+                    "id": "FREE_SPIN_ONLY",
+                    "enabledInModes": {
+                        "FREE_SPINS": true,
+                        "BASE": false,
+                        "BONUS": false
+                    }
+                }
+            }
+        },
+        "BONUS": {
+            "reelStrips": {
+                "0": {
+                    "reelIndex": 0,
+                    "symbols": [
+                        "EAGLE",
+                        "EAGLE",
+                        "A"
+                    ]
+                },
+                "1": {
+                    "reelIndex": 1,
+                    "symbols": [
+                        "EAGLE",
+                        "K",
+                        "Q"
+                    ]
+                },
+                "2": {
+                    "reelIndex": 2,
+                    "symbols": [
+                        "EAGLE",
+                        "A",
+                        "K"
+                    ]
+                },
+                "3": {
+                    "reelIndex": 3,
+                    "symbols": [
+                        "EAGLE",
+                        "Q",
+                        "A"
+                    ]
+                },
+                "4": {
+                    "reelIndex": 4,
+                    "symbols": [
+                        "EAGLE",
+                        "K",
+                        "A"
+                    ]
+                }
+            },
+            "availableSymbols": {
+                "A": true,
+                "K": true,
+                "Q": true,
+                "EAGLE": true
+            },
+            "spinRules": {
+                "BONUS_ONLY": {
+                    "id": "BONUS_ONLY",
+                    "enabledInModes": {
+                        "BONUS": true,
+                        "BASE": false,
+                        "FREE_SPINS": false
+                    }
+                }
+            }
+        }
+    },
+    "payouts": {
+        "A_PAYOUTS": {
+            "3": 0.2,
+            "4": 0.5,
+            "5": 1
+        },
+        "J_PAYOUTS": {
+            "3": 0.3,
+            "4": 0.9,
+            "5": 1.6
+        },
+        "K_PAYOUTS": {
+            "3": 0.2,
+            "4": 0.6,
+            "5": 1.2
+        },
+        "Q_PAYOUTS": {
+            "3": 0.3,
+            "4": 0.8,
+            "5": 1.5
+        },
+        "EAGLE_PAYOUTS": {
+            "3": 2,
+            "4": 6,
+            "5": 12
+        },
+        "WINGS_PAYOUTS": {
+            "3": 1,
+            "4": 3,
+            "5": 6
+        },
+        "SNAKE_PAYOUTS": {
+            "3": 0.7,
+            "4": 2,
+            "5": 4
+        },
+        "FEATHERS_PAYOUTS": {
+            "3": 0.5,
+            "4": 1.5,
+            "5": 3
+        },
+        "MOUNT_PAYOUTS": {
+            "3": 2,
+            "4": 5,
+            "5": 10
+        },
+        "GOLD_EAGLE_PAYOUTS": {
+            "3": 5,
+            "4": 15,
+            "5": 50
+        }
+    },
+    "specialRules": {
+        "wildFiveOfKindPaysAs": "HIGHEST_SYMBOL"
+    }
+}
