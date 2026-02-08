@@ -79,3 +79,4 @@ export interface GridConfig {
 }
 
 export type ElementPosition = { row: number, column: number }
+export type Winnings = Record<string, ElementPosition[][]>
